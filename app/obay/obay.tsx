@@ -251,12 +251,12 @@ function Projects() {
 export function Obay() {
   return (
     <main className="flex flex-col items-center justify-center pt-16 pb-10 gap-10">
-      <div className="text-5xl text-red-500 border border-red-500 rounded-2xl p-6 shadow shadow-2xl shadow-amber-300 mb-24">
+      {/* <div className="text-5xl text-red-500 border border-red-500 rounded-2xl p-6 shadow shadow-2xl shadow-amber-300 mb-24">
         ⚠️⚠️⚠️ This website is still a work in progress ⚠️⚠️⚠️
         <p className="text-2xl text-amber-500 mt-10">
           Information found here maybe INCORRECT, or a draft
         </p>
-      </div>
+      </div> */}
       <div className="flex flex-row items-start justify-center gap-8 max-w-[1200px] w-full px-4 lg:px-0">
         <div className="w-full lg:w-1/2">
           <h1 className="text-4xl font-bold mb-4">Hello, I’m Obay</h1>
