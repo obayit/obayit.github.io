@@ -1,0 +1,41 @@
+.crt {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Base image */
+.crt img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: contrast(1.2) brightness(1.1) saturate(1.2);
+}
+
+/* Scanlines */
+.scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25) 0px,
+    rgba(0,0,0,0.25) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Vignette (edges darkening) */
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle,
+    transparent 60%,
+    rgba(0,0,0,0.4) 100%
+  );
+  pointer-events: none;
+}
