@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import myFace from "./calm-portrait-of-a-young-man.png";
+import SkillChart from "./skill-chart";
 
-import etherScreen1 from "./ether-app-screens/ether-app-screenshot-1.jpg"
+// import etherScreen1 from "./ether-app-screens/ether-app-screenshot-1.jpg"
 import etherScreen2 from "./ether-app-screens/ether-app-screenshot-2.jpg"
 import etherScreen3 from "./ether-app-screens/ether-app-screenshot-3.jpg"
 import etherScreen4 from "./ether-app-screens/ether-app-screenshot-4.jpg"
@@ -12,11 +13,12 @@ import etherScreen8 from "./ether-app-screens/ether-app-screenshot-8.jpg"
 import etherScreen9 from "./ether-app-screens/ether-app-screenshot-9.jpg"
 import etherScreen10 from "./ether-app-screens/ether-app-screenshot-10.jpg"
 import etherScreen11 from "./ether-app-screens/ether-app-screenshot-11.jpg"
-
-
 import ether_system_1 from "./ether-system/system.jpg"
+import shopClientImage1 from "./odoo-client/image1.jpg"
+import shopClientImage2 from "./odoo-client/image2.jpg"
+import shopClientImage3 from "./odoo-client/image3.jpg"
+import shopClientImage4 from "./odoo-client/image4.jpg"
 import CRTImage, { CRTImage2 } from "./crt-image";
-import SkillChart from "./skill-chart";
 
 const etherAppScreens = [
   // {
@@ -63,6 +65,25 @@ const etherAppScreens = [
   {
     description: 'Login screen',
     image: etherScreen11,
+  },
+]
+
+const odooClientImages = [
+  {
+    description: 'Home page showing all products and categories',
+    image: shopClientImage1,
+  },
+  {
+    description: 'Product attributes',
+    image: shopClientImage4,
+  },
+  {
+    description: 'Show cart',
+    image: shopClientImage2,
+  },
+  {
+    description: 'Order history',
+    image: shopClientImage3,
   },
 ]
 
@@ -115,18 +136,12 @@ const projectData = [
       `<p class="text-2xl text-amber-400">Open Source Project</p>
       <p class="text-sx">Features:</p>
       <ul class="list-disc ml-4">
-        <li>Multi-company remittance</li>
-        <li>Compliance rules based on company policy</li>
-        <li>Payment gateways integration</li>
-        <li>Banking as a Service APIs integration</li>
-        <li>Multiple other APIs integration</li>
-        <li>Created APIs for the mobile app</li>
+        <li>Similar to odoo /shop page</li>
+        <li>View and search products</li>
+        <li>Select product attributes</li>
+        <li>Add to cart</li>
       </ul>`,
-    images: [
-      {
-        image: ether_system_1,
-      },
-    ]
+    images: odooClientImages,
   },
 ];
 
@@ -263,7 +278,7 @@ export function Obay() {
           <p className="mb-6 text-slate-700">
             I’m a software engineer focused on building performant web and mobile applications with React, React Native, and Odoo.
           </p>
-          <SkillChart />
+          <SkillChart myData={mainSkills} header='My Main Skills'/>
           <p className="text-slate-600">
             Browse my work below ⬇️.
           </p>
@@ -278,3 +293,26 @@ export function Obay() {
     </main>
   );
 }
+
+const mainSkills = [
+  {
+    label: 'Odoo',
+    value: 9,
+  },
+  {
+    label: 'React Native',
+    value: 9,
+  },
+  {
+    label: 'React',
+    value: 7,
+  },
+  {
+    label: 'Linux',
+    value: 7,
+  },
+  {
+    label: 'DevOps',
+    value: 5,
+  }
+]
